@@ -3,7 +3,7 @@ lOne = []
 lTwo = []
 
 #Part 1
-with open('bob.txt') as f:
+with open('input.txt') as f:
     for line in f:
         x = line.strip().split("   ")
         lOne.append(int(x[0]))
@@ -17,7 +17,7 @@ with open('bob.txt') as f:
 print(sum)
 
 #Part 2
-with open('bob.txt') as f:
+with open('input.txt') as f:
     for line in f:
         x = line.strip().split("   ")
         lOne.append(int(x[0]))

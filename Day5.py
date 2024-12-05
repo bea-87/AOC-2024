@@ -6,7 +6,7 @@ sum = 0
 wrongOrders = []
 
 
-with open('bob.txt') as f:
+with open('input.txt') as f:
     rules = f.read().split("\n\n")
     for i in rules[1].split("\n"):
         orders.append(i.split(","))

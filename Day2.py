@@ -8,7 +8,7 @@ def isSafe(nums):
     return (1, 0)
 
 #Part 1
-with open('bob.txt') as f:
+with open('input.txt') as f:
     for line in f:
         nums = line.split(" ")
         safeValues += isSafe(nums)[0]
@@ -16,7 +16,7 @@ with open('bob.txt') as f:
 print(safeValues)
 
 #Part 2
-with open('bob.txt') as f:
+with open('input.txt') as f:
     for line in f:
         nums = line.split(" ")
         if isSafe(nums)[0]:

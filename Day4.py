@@ -27,7 +27,6 @@ for p in range(4):
     lines = np.rot90(lines, k=1)
 
 
-
 #Part 2
 '''for i in range(1, len(lines)-1):
    for j in range(1, len(lines[i])-1):
