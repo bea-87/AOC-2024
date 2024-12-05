@@ -12,15 +12,15 @@ def isSafe(nums):
     return [safe, indexNotSafe]
 
 #Part 1
-'''with open('bob.txt') as f:
+with open('bob.txt') as f:
     for line in f:
         nums = line.split(" ")
-        safeValues += isSafe(nums)
+        safeValues += isSafe(nums)[0]
 
-print(safeValues)'''
+print(safeValues)
 
 #Part 2
-with open('bob.txt') as f:
+'''with open('bob.txt') as f:
     for line in f:
         nums = line.split(" ")
         if isSafe(nums)[0]:
@@ -35,4 +35,4 @@ with open('bob.txt') as f:
 
 
 
-print("total", safeValues)
+print("total", safeValues)'''
