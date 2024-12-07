@@ -3,18 +3,21 @@ start_time = time.time()
 
 result = 0
 
-def checkValidity(total, totalAtm, nums):
-    if total == totalAtm and len(nums) == 0:
+def checkValidity(total, nums):
+    if total == 0 and len(nums) == 0:
         return True
-    if len(nums) == 0 or totalAtm > total:
+    if len(nums) == 0:
         return False
-    if checkValidity(total, totalAtm*nums[0], nums[1:]):
-        return True
-    if checkValidity(total, totalAtm+nums[0], nums[1:]):
-        return True
+    if total%nums[-1] == 0:
+        if checkValidity(int(total/nums[-1]), nums[:-1]):
+            return True
+    if total >= nums[-1]:
+        if checkValidity(total - nums[-1], nums[:-1]):
+            return True
     #Part 2
-    if checkValidity(total, int("".join([str(totalAtm), str(nums[0])])), nums[1:]):
-        return True
+    if len(str(total)) >= len(str(nums[-1])) and str(total)[-len(str(nums[-1])):] == str(nums[-1]):
+        if checkValidity(int(str(total)[:-len(str(nums[-1]))]), nums[:-1]):
+            return True
     return False
 
 with open('input.txt') as f:
@@ -22,7 +25,7 @@ with open('input.txt') as f:
         x = line.strip().split(":")
         total = int(x[0])
         nums = [int(a) for a in x[1].split(" ")[1:]]
-        if checkValidity(total, nums[0], nums[1:]):
+        if checkValidity(total, nums):
             result += total
             
 print(result)

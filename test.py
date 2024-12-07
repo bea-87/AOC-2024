@@ -2,8 +2,8 @@ import numpy as np
 from scipy.ndimage import rotate
 
 lines = [["g", "j", "k"], ["l", "h", "w"], ["r", "t", "t"]]
-totalAtm = 20
-nums = [12, 3, 4, 5]
+total = 2052
+nums = [12, 3, 4, 52]
 
-print(int("".join([str(totalAtm), str(nums[0])])), nums[1:])
+print(int(str(total)[:-len(str(nums[-1]))]))
 
