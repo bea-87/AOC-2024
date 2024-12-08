@@ -8,12 +8,12 @@ def isSafe(nums):
     return (1, 0)
 
 #Part 1
-with open('input.txt') as f:
+'''with open('input.txt') as f:
     for line in f:
         nums = line.split(" ")
         safeValues += isSafe(nums)[0]
 
-print(safeValues)
+print(safeValues)'''
 
 #Part 2
 with open('input.txt') as f:
@@ -28,4 +28,4 @@ with open('input.txt') as f:
 
 
 
-print("total", safeValues)
+print(safeValues)
