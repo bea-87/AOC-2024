@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ask
+=======
+ ajdfljasldfj
+>>>>>>> 999e23c15eb2065a91c54fb547aa924da4743892
