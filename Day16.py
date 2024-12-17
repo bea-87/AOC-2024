@@ -6,7 +6,7 @@ with open('input.txt') as f:
 numOfRows = len(lines)
 numOfCols = len(lines[0])
 
-visited = {}  # Dictionary to store the minimum score for each (curPos, dirIndex)
+visited = {}
 
 startPos = (numOfRows - 2, 1)
 endPos = (1, numOfCols - 2)
